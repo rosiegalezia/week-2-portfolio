@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+:root {
+  /* declare a variable with `--` syntax */
+  --teal-light: #4dbcbc;
+  --teal-dark: #029696;
+  --background-teal: #70caca;
+  --light: #fff;
+  --border: border-style
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* header {
+  padding: 40px;
+  text-align: center;
+  background: var(--teal-dark)
+  color: #fff;
+} */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  /* margin: 0px 5%; */
+}
+
+nav a {
+  color: var(--dark)
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #fff;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  padding: 10px;
+  flex: 0 0 300px;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  margin-left: 50px;
+  color: var(--teal-dark);
+}
+
+h2 {
+  padding: 10px;
+  margin: 10px 50px;
+  text-align: center;
+  color: var(--teal-light);
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #fff;
+}
+
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-teal);
+}
+
+.navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.page-section {
+
+}
+
+.hero-banner {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+.projects {
+  
+}
+
+#about {
+
+}
+
+#work {
+
+}
+
+#contact {
+
+}
+
+#resume {
+
+}
