@@ -12,8 +12,18 @@
   --border: border-style
 }
 
-main {
-  padding: 10px;
+#main-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "about about-content"
+    "work work-content"
+    "contact contact-content"
+    "cv cv-content";
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -36,7 +46,7 @@ nav {
   /* margin: 0px 5%; */
 }
 
-nav a {
+/* nav a {
   color: var(--dark)
   padding: 14px 20px;
   text-decoration: none;
@@ -45,7 +55,7 @@ nav a {
 
 nav a:hover {
   background-color: #fff;
-}
+} */
 
 .card {
   border-style: solid;
@@ -66,18 +76,17 @@ h1 {
 
 h2 {
   font-size: 60px;
-  margin-left: 50px;
+  /* margin-left: 2px; */
   line-height: 100%;
   text-align: right;
   color: var(--teal-dark);
-  padding: 10px;
-  /* text-wrap: nowrap; */
+  /* padding: 10px; */
 }
 
 h3 {
-  padding: 30px 0px;
+  padding: 50px 0px;
   margin: 10px 50px;
-  /* text-align: center; */
+  text-align: center;
   color: var(--teal-light);
   font-size: 25px;
   text-wrap: nowrap;
@@ -97,7 +106,8 @@ h6 {
 }
 
 p {
-  margin: 0;
+  margin: 20px;
+  text-align: left;
 }
 
 .header {
@@ -116,7 +126,7 @@ p {
 }
 
 .page-section {
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 
 .hero-banner {
@@ -126,48 +136,61 @@ p {
 }
 
 .section-heading {
-display: flex;
-padding: 20px;
-border-right: 5px solid var(--teal-light);
+  /* display: flex; */
+  padding: 20px;
+  border-right: 5px solid var(--teal-light);
 }
 
-.projects {
+/* .projects {
   display: grid;
-}
+} */
 
 #about {
-  display: flex;
+  grid-area: about;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  padding: ;
-  flex: 2 1 auto;
+  padding: ; */
 }
 
-#about-copy {
-padding: 50px;
-margin: 10px;
+#about-content {
+  grid-area: about-content;
+  /* padding: 50px;
+margin: 10px; */
 }
 
 #work {
-  display: flex;
+  grid-area: work;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  padding: ;
-  flex: 2 1 auto;
+  padding: ; */
+}
+
+#work-content {
+  grid-area: work-content;
 }
 
 #contact {
-  display: flex;
+  grid-area: contact;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  padding: ;
-  flex: 2 1 auto;
+  padding: ; */
+}
+
+#contact-content {
+  grid-area: contact-content;
 }
 
 #cv {
-  display: flex;
+  grid-area: cv;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  padding: ;
-  flex: 2 1 auto;
+  padding: ; */
+}
+
+#cv-content {
+  grid-area: cv-content;
 }
