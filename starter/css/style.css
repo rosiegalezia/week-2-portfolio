@@ -12,6 +12,10 @@
   --border: border-style
 }
 
+main {
+  padding: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -53,26 +57,40 @@ nav a:hover {
 }
 
 h1 {
-  text-align: center;
+  /* text-align: center; */
   font-size: 80px;
   margin-left: 50px;
   color: var(--teal-dark);
+  text-wrap: nowrap;
 }
 
 h2 {
+  font-size: 60px;
+  margin-left: 50px;
+  line-height: 100%;
+  text-align: right;
+  color: var(--teal-dark);
   padding: 10px;
-  margin: 10px 50px;
-  text-align: center;
-  color: var(--teal-light);
-  font-size: 25px;
+  /* text-wrap: nowrap; */
 }
 
 h3 {
-  font-size: 20px;
-  color: #fff;
+  padding: 30px 0px;
+  margin: 10px 50px;
+  /* text-align: center; */
+  color: var(--teal-light);
+  font-size: 25px;
+  text-wrap: nowrap;
 }
 
-h4,
+h4 {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+  text-wrap: nowrap;
+  margin: 10px;
+}
+
 h5,
 h6 {
   margin: 0;
@@ -85,18 +103,20 @@ p {
 .header {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
   background-color: var(--background-teal);
 }
 
 .navigation {
   display: flex;
-  width: 50%;
+  margin-right: 50px;
+  width: 40%;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .page-section {
-
+  flex-wrap: nowrap;
 }
 
 .hero-banner {
@@ -105,22 +125,49 @@ p {
   background-image: url("../images/02-portfolio-3.jpg");
 }
 
+.section-heading {
+display: flex;
+padding: 20px;
+border-right: 5px solid var(--teal-light);
+}
+
 .projects {
-  
+  display: grid;
 }
 
 #about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: ;
+  flex: 2 1 auto;
+}
 
+#about-copy {
+padding: 50px;
+margin: 10px;
 }
 
 #work {
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: ;
+  flex: 2 1 auto;
 }
 
 #contact {
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: ;
+  flex: 2 1 auto;
 }
 
-#resume {
-
+#cv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: ;
+  flex: 2 1 auto;
 }
