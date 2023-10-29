@@ -9,7 +9,7 @@
   --teal-dark: #029696;
   --background-teal: #70caca;
   --light: #fff;
-  --border: border-style
+  --card-border: 2px solid var(--teal-light)
 }
 
 #main-grid {
@@ -57,10 +57,19 @@ nav a:hover {
   background-color: #fff;
 } */
 
+.projects {
+  flex: 1;
+  background-color: var(--white);
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .card {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 50px;
+  /* border: 2px solid var(--teal-light); */
+  border: var(--card-border);
+  border-radius: 10px;
   padding: 10px;
   flex: 0 0 300px;
   margin: 20px;
@@ -110,6 +119,15 @@ p {
   text-align: left;
 }
 
+a {
+  padding: 50px 0px;
+  margin: 10px 50px;
+  text-align: center;
+  color: var(--teal-light);
+  font-size: 25px;
+  text-wrap: nowrap;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -137,13 +155,9 @@ p {
 
 .section-heading {
   /* display: flex; */
-  padding: 20px;
+  padding: 30px;
   border-right: 5px solid var(--teal-light);
 }
-
-/* .projects {
-  display: grid;
-} */
 
 #about {
   grid-area: about;
@@ -181,6 +195,7 @@ margin: 10px; */
 
 #contact-content {
   grid-area: contact-content;
+  display: inline-block;
 }
 
 #cv {
