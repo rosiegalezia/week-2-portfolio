@@ -20,16 +20,22 @@ body {
 }
 
 .projects {
-  /* flex: 1; */
-  background-color: var(--white);
-  /* padding: 50px; */
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: space-evenly; */
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 40px;
-  display: grid;
   gap: 1rem;
+}
+
+.hero-card {
+  border: var(--card-border);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px;
+  width: fit-content;
+  min-height: auto;
+  display: flexbox;
 }
 
 .card {
@@ -116,8 +122,16 @@ a {
   text-wrap: nowrap;
 }
 
+a.work {
+text-decoration: none;
+color: black;
+font-size: 16px;
+text-align: center;
+}
+
 .header {
   display: flex;
+  flex-direction: row;
   align-items: center;
   background-color: var(--background-teal);
   padding: 20px;
@@ -128,10 +142,10 @@ header {
   /* padding: 40px; */
   /* width: fit-content; */
   text-align: right;
-  background: var(--teal-dark) color: #fff;
+  background: var(--teal-dark);
+  color: #fff;
   width: 100vw;
 }
-
 
 .navigation {
   display: flex;
@@ -141,10 +155,6 @@ header {
   align-items: center;
   justify-content: flex-end;
   padding: 20px;
-}
-
-.page-section {
-  /* flex-wrap: nowrap; */
 }
 
 .hero-banner {
@@ -206,7 +216,7 @@ header {
 #work-content {
   grid-area: work-content;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 #contact {
@@ -243,15 +253,34 @@ header {
 } */
 
 /* For screens smaller than 768px wide */
-@media (max-width: 768px) {
+
+@media (max-width: 820px) {
   .section-heading {
     font-size: 30px;
     padding: 15px;
   }
 
   #main-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 1fr 1fr;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "about"
+      "about-content"
+      "work"
+      "work-content"
+      "contact"
+      "contact-content"
+      "cv"
+      "cv-content";
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-heading {
+    padding: 0px;
+    border-right: 0px solid var(--teal-light);
   }
 
   h2 {
@@ -261,12 +290,28 @@ header {
     color: var(--teal-dark);
   }
 
-  .navigation {
-    flex-direction: row;
-  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+.projects {
+  flex-direction: column;
+}
+/* 
+.hero-card {
+  border: var(--card-border);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px;
+  width: fit-content;
+  min-height: auto;
+  display: flexbox;
+} */
+}
+
+@media screen and (max-width: 820px) {
   #work-content {
     grid-area: work-content;
     flex-direction: column;
@@ -274,6 +319,8 @@ header {
 
   .navigation {
     flex-direction: row;
+    justify-content: center;
+    padding: 20px;
   }
 
   h2 {

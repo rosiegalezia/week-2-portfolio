@@ -9,19 +9,18 @@ This was a good opportunity to practice applying CSS grids and flexbox, and lear
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+1. Copy the following link: https://github.com/rosiegalezia/week-2-portfolio.git
+2. Open Git Bash
+3. Change the current working directory to the desired location for the cloned directory using the cd command
+4. Use the command git clone followed by the url https://github.com/rosiegalezia/week-2-portfolio.git and press enter to clone locally
 
 ## Usage
 
 The website is available at https://rosiegalezia.github.io/week-2-portfolio/ 
 
-Provide instructions and examples for use. Include screenshots as needed.
+An image of the website's appearance is shown here:
+![a screenshot of Rosie Galezia's portfolio website](./starter/screencapture.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
